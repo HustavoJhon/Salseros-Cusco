@@ -1,681 +1,213 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Salseros Cusco - Español</title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	padding-inline-start: 0;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.page-description {
-    margin-bottom: 2em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(55, 53, 47, 1);
-}
-.highlight-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.highlight-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.highlight-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.highlight-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.highlight-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.highlight-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.highlight-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.highlight-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.highlight-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.highlight-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.highlight-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.highlight-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.highlight-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.block-color-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.block-color-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.block-color-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.block-color-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.block-color-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.block-color-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.block-color-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.block-color-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.block-color-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.block-color-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.block-color-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.block-color-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
-.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
-.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
-.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
-.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
-.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
-.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
-.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
-.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
-.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
-.select-value-color-pageGlass { background-color: undefined; }
-.select-value-color-washGlass { background-color: undefined; }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="7b4de484-a8fc-47b0-95eb-ef24dc7d7f2f" class="page mono"><header><img class="page-cover-image" src="images/banner.png" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon"><img src="images/logo.png" alt=""></span></div><h1 class="page-title">Salseros Cusco - Español</h1><p class="page-description"></p></header><div class="page-body"><blockquote id="572baf2a-c339-43a5-a18a-ae8f2c5bcc54" class="block-color-yellow"><em>..MAS QUE UNA ESCUELA SOMOS FAMILA!</em></blockquote><h2 id="a469b508-cc00-4b88-a3f3-dacb8c73f40d" class=""><strong>Bienvenido a Salseros Cusco</strong></h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="aa163293-e7c3-4122-8bf8-7b97389c09b9"><div style="font-size:1.5em"><span class="icon">🗨️</span></div><div style="width:100%">Aquí puedes encontrar mucha información sobre nuestra Escuela de Salsa y Bachata.<p id="9d7e31dd-388f-4cb4-9f34-9b956a87e1a1" class="">Cualquier consulta, escríbenos al <a href="https://salseroscusco.jimdofree.com/contacto/">Whatsapp</a> y siguenos en todas nuestras redes sociales.</p><p id="5471235d-d7ca-4f93-bf7d-4f660d794993" class="">Esperamos que pertenezca a nuestra familia Salseros Cusco.</p><p id="90931ccf-958c-461c-a939-ecf47370676e" class="">Salsaludos!</p></div></figure><h2 id="f45afdef-e8b0-43f2-8a6a-7841f8d43e7f" class="">Horarios</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="45caef78-f51b-48c8-85e8-682f6562785f"><div style="font-size:1.5em"><span class="icon">🗓️</span></div><div style="width:100%">Clases 3 veces por semana total de 12 clases al mes!</div></figure><blockquote id="0c71d4a8-2d39-4156-8f58-2517e1155179" class=""><strong><em>Color:</em></strong><em> </em><em><mark class="highlight-pink">rosa</mark></em><em> = inicial | </em><em><mark class="highlight-orange">naranga</mark></em><em> = basico</em></blockquote><table id="c465e593-beaa-4ad8-8cc1-cdc903be1566" class="simple-table"><thead class="simple-table-header"><tr id="f239636b-f8b6-4968-9167-b777cabd065d"><th id="T\o~" class="simple-table-header-color simple-table-header" style="width:59px">H/D</th><th id="BT|;" class="simple-table-header-color simple-table-header" style="width:84px"><strong>Lunes</strong></th><th id="g:Yh" class="simple-table-header-color simple-table-header" style="width:131px"><strong>Martes</strong></th><th id="GjrH" class="simple-table-header-color simple-table-header" style="width:102px"><strong>Miercoles</strong></th><th id="LDCW" class="simple-table-header-color simple-table-header" style="width:130px"><strong>Jueves</strong></th><th id="ns=@" class="simple-table-header-color simple-table-header" style="width:84px"><strong>Viernes</strong></th><th id="M^XW" class="simple-table-header-color simple-table-header" style="width:95px"><strong>Sabado</strong></th></tr></thead><tbody><tr id="eccd4ec4-d165-450b-a8a3-6c6c261595c8"><th id="T\o~" class="simple-table-header-color simple-table-header" style="width:59px">5pm</th><td id="BT|;" class="" style="width:84px"><mark class="highlight-pink_background">Bachata</mark></td><td id="g:Yh" class="" style="width:131px"></td><td id="GjrH" class="" style="width:102px"><mark class="highlight-pink_background">Bachata</mark></td><td id="LDCW" class="" style="width:130px"></td><td id="ns=@" class="" style="width:84px"><mark class="highlight-pink_background">Bachata</mark></td><td id="M^XW" class="" style="width:95px"></td></tr><tr id="1f18170d-b9e5-490b-ad72-e85695257929"><th id="T\o~" class="simple-table-header-color simple-table-header" style="width:59px">6pm</th><td id="BT|;" class="" style="width:84px"><mark class="highlight-pink_background">Salsa</mark></td><td id="g:Yh" class="" style="width:131px"></td><td id="GjrH" class="" style="width:102px"><mark class="highlight-pink_background">Salsa</mark></td><td id="LDCW" class="" style="width:130px"></td><td id="ns=@" class="" style="width:84px"><mark class="highlight-pink_background">Salsa</mark></td><td id="M^XW" class="" style="width:95px"></td></tr><tr id="399d60d2-7443-4a9c-b8b6-ebe47e82578d"><th id="T\o~" class="simple-table-header-color simple-table-header" style="width:59px">7pm</th><td id="BT|;" class="" style="width:84px"><mark class="highlight-orange_background">Bachata</mark></td><td id="g:Yh" class="" style="width:131px"><mark class="highlight-purple">Coreografico</mark></td><td id="GjrH" class="" style="width:102px"><mark class="highlight-orange_background">Bachata</mark></td><td id="LDCW" class="" style="width:130px"><mark class="highlight-purple">Coreografico</mark></td><td id="ns=@" class="" style="width:84px"><mark class="highlight-orange_background">Bachata</mark></td><td id="M^XW" class="" style="width:95px"><mark class="highlight-brown">Talleres</mark></td></tr><tr id="ebbf1ec7-d1ea-473a-9be2-a155b1155027"><th id="T\o~" class="simple-table-header-color simple-table-header" style="width:59px">8pm</th><td id="BT|;" class="" style="width:84px"><mark class="highlight-orange_background">Salsa</mark></td><td id="g:Yh" class="" style="width:131px"><mark class="highlight-purple">Coreografico</mark></td><td id="GjrH" class="" style="width:102px"><mark class="highlight-orange_background">Bachata</mark></td><td id="LDCW" class="" style="width:130px"><mark class="highlight-purple">Coreografico</mark></td><td id="ns=@" class="" style="width:84px"><mark class="highlight-orange_background">Salsa</mark></td><td id="M^XW" class="" style="width:95px"><mark class="highlight-brown">Talleres</mark></td></tr></tbody></table><h2 id="d60b7679-919f-4279-85f9-c7c254b6f47d" class="">Nuestro Staff</h2><blockquote id="0233f312-5936-49b4-8bc5-7051cbca1688" class=""><em>Con orgullo presentamos a nuestro team de salseros Cusco!</em></blockquote><div id="ac9a4c81-7796-42d2-b565-8274b7681b8c" class="column-list"><div id="dbee319c-19e3-4987-b480-f475bdd701d0" style="width:33.33333333333334%" class="column"><figure id="414f7f46-93d8-4466-abfd-3a219926c372" class="image"><a href="images/Cesar.jpg"><img style="width:204px" src="images/Cesar.jpg"/></a></figure><p id="f5a5bdc3-54d9-4e7a-9435-605605755ace" class=""><strong>Cesar Huaylas</strong>: profesor y director de SALSEROS CUSCO. Amante y apacionado en su trabajo 20 años y fundador de que la salsa en cusco siga vivo.</p></div><div id="85e317e7-e55c-4ee5-9920-3ac94e88349e" style="width:33.333333333333336%" class="column"><figure id="844fb209-4308-449e-83f1-421270a52db6" class="image"><a href="images/Moira.jpg"><img style="width:206px" src="images/Moira.jpg"/></a></figure><p id="3f25ae7e-bc2c-4f36-b0d1-5c315a347014" class=""><strong>Moira</strong>: administradora y encargada de la escuela.</p><p id="bb78059a-940f-4743-b1fa-8917418ef2aa" class="">
-</p></div><div id="f7595a68-0814-4ed7-83d0-a8b7a1e7597f" style="width:33.33333333333333%" class="column"><figure id="2c4ae555-ba40-46a6-adb6-aafbdc14daad" class="image"><a href="images/Erika.jpg"><img style="width:206px" src="images/Erika.jpg"/></a></figure><p id="16abdda9-a955-470b-8585-b937639475fd" class=""><strong>Erika</strong>: profesora de salsa on 1, amante de la salsa lineal y salsa dura.</p></div></div><hr id="94a445c6-8b0b-4610-a569-582cec97e0d7"/><div id="0d11ebe1-d7cb-4762-8594-f28fee19a363" class="column-list"><div id="a4c473f8-4e56-4ce3-a538-c509c498fe60" style="width:50%" class="column"><h2 id="4168594a-308e-492e-a6ee-8491c471f048" class="">Redes Sociales</h2><p id="51d44fea-fd63-4703-8398-dc09a621de33" class="">Siguenos en todas nuestras redes sociales como @SalserosCusco en <a href="https://www.facebook.com/salseroscuzco"><mark class="highlight-blue">Facebook</mark></a><mark class="highlight-blue">, </mark><a href="https://www.tiktok.com/@salseroscusco">Tiktok</a> o escribenos a nuestro <a href="https://wa.me/51984356212"><mark class="highlight-teal">Whatsapp</mark></a>.</p><p id="2c76a27a-0085-410d-b853-a157b05bc871" class="">
-</p><p id="bb6c6c6b-4d19-47ca-afe8-cbd4ac696caf" class=""><strong>Teléfono:</strong></p><ul id="c8bd9f1d-65a7-4acf-9dc0-2521ff3ed954" class="bulleted-list"><li style="list-style-type:disc">(+51) 984 356 212 (Cesar, español)</li></ul><ul id="b5723643-f4c6-4f88-8523-81ca30173d23" class="bulleted-list"><li style="list-style-type:disc">(+51) 921 958 733 (Moira, english)</li></ul><p id="93fdb977-a6f8-4196-a339-da3480de1c60" class="">
-</p><p id="2a5800ca-446c-462a-a69a-2d06ac6439ea" class=""><strong>Email:</strong></p><ul id="1a8f19aa-6dcd-4f28-a23f-a8595321db00" class="bulleted-list"><li style="list-style-type:disc">salseroscusco@gmx.com</li></ul><p id="ff1b6fb0-bf53-4e7b-ab63-07ee0e73822f" class="">
-</p><p id="14169b41-c7cd-4daf-942d-d9a5a7d7defb" class=""><strong>Salseros Cusco</strong></p><p id="24abda76-4d96-4239-97cd-1e35868d047c" class="">🏚️ Collacalle #480 a la altura de la plaza Limacpampa Grande Cusco, Peru</p></div><div id="1e841712-0c5e-4ea0-8842-4918f76d2648" style="width:50%" class="column"><h2 id="60df1d68-3de4-4d6d-b549-f4453253409d" class="">Proximos Eventos</h2><figure id="dee92950-1ff6-44df-8860-4a55f1284563" class="image"><a href="images/Event.png"><img style="width:276px" src="images/Event.png"/></a></figure><p id="8f0d3f7c-9a67-463f-ab66-0cef6e896aae" class="">T<em>ODOS LOS DOMINGOS de 6pm a 10pm.</em></p><p id="0a338a6f-2563-4ef6-ad4f-e55034498bc3" class=""><em>Social de Salsa y Bachata en Salseros Cusco.</em></p><p id="3ce3aac1-4db3-455a-b276-f2ee17cb2cb8" class=""><em>Collacalle480, al lado de la plaza Limacpampa Grande.</em></p><p id="3bbe6a8f-5dbc-4dc8-a64f-6b1d98e2188d" class=""><em>Te estamos esperando =)</em></p></div></div><p id="9def4654-2f55-497f-a3a8-e8c415659476" class="">
-</p></div></article></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Page Information
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>Salseros Cusco</title>
+    <meta name="description" content="https://littlelink.io" />
+    <meta name="author" content="Seth Cottle" />
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <!-- Themes:
+            Auto:   css/skeleton-auto.css
+            Light:  css/skeleton-light.css
+            Dark:   css/skeleton-dark.css
+     -->
+    <link rel="stylesheet" href="css/skeleton-dark.css" />
+
+    <!-- Brand Styles -->
+    <link rel="stylesheet" href="css/brands.css" />
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/SalserosCusco.svg" />
+  </head>
+  <body>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+      <div class="row">
+        <div class="column" style="margin-top: 10%"></div>
+
+        <!-- Your Image Here -->
+        <img
+          src="images/SalserosCusco.png"
+          class="avatar"
+          srcset="images/SalserosCusco.svg 2x"
+          alt=""
+        />
+
+        <!-- Title -->
+        <h1 role="heading">Salseros Cusco</h1>
+
+        <!-- Short Bio -->
+        <p>mas que una escuela de baile somo familia.</p>
+
+        <!-- Brands –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+        <!-- Facebook -->
+        <a
+          class="button button-faceb"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img
+            class="icon"
+            src="images/icons/facebook.svg"
+            alt=""
+          />Facebook</a
+        ><br />
+
+        <!-- Instagram -->
+        <a
+          class="button button-instagram"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img
+            class="icon"
+            src="images/icons/instagram.svg"
+            alt=""
+          />Instagram</a
+        ><br />
+
+        <!-- TikTok -->
+        <a
+          class="button button-tiktok"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img class="icon" src="images/icons/tiktok.svg" alt="" />TikTok</a
+        ><br />
+        <!-- WhatsApp -->
+        <a
+          class="button button-whatsapp"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img
+            class="icon"
+            src="images/icons/whatsapp.svg"
+            alt=""
+          />WhatsApp</a
+        ><br />
+
+        <!-- Telegram -->
+        <a
+          class="button button-telegram"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img
+            class="icon"
+            src="images/icons/telegram.svg"
+            alt=""
+          />Telegram</a
+        ><br />
+
+        <!-- Facebook Messenger -->
+        <a
+          class="button button-messenger"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img class="icon" src="images/icons/messenger.svg" alt="" />Chat on
+          Messenger</a
+        ><br />
+
+        <!-- Spotify -->
+        <a
+          class="button button-spotify"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img class="icon" src="images/icons/spotify.svg" alt="" />Spotify</a
+        ><br />
+
+        <hr />
+
+        <!-- Zoom -->
+        <a
+          class="button button-zoom"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img class="icon" src="images/icons/zoom.svg" alt="" />Join Zoom
+          Webinar</a
+        ><br />
+
+        <!-- Generic Calendar -->
+        <a
+          class="button button-default"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img
+            class="icon"
+            src="images/icons/generic-calendar.svg"
+            alt=""
+          />Event</a
+        ><br />
+
+        <!-- Generic Email -->
+        <a
+          class="button button-default"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img
+            class="icon"
+            src="images/icons/generic-email.svg"
+            alt=""
+          />Email</a
+        ><br />
+
+        <!-- Generic Phone -->
+        <a
+          class="button button-default"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img class="icon" src="images/icons/generic-phone.svg" alt="" />Call
+          Us</a
+        ><br />
+
+        <!-- Generic Website -->
+        <a
+          class="button button-default"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          role="button"
+          ><img
+            class="icon"
+            src="images/icons/generic-website.svg"
+            alt=""
+          />Website</a
+        ><br />
+        <br />
+
+        <p>Creator|Salseros Cusco</p>
+      </div>
+    </div>
+  </body>
+</html>

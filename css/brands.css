@@ -1,0 +1,197 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- Buttons
+- Brand Styles
+
+*/
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.button,
+button {
+  display: inline-block;
+  text-decoration: none;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  width: 300px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 14px 12px 12px 12px;
+  letter-spacing: 0.1px;
+  white-space: wrap;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+button:hover,
+.button:focus {
+  color: #212121;
+  border-color: #888;
+  outline: #7AB8FF solid 3px
+}
+
+.button.button-primary {
+  color: #fff;
+  filter: brightness(90%);
+}
+
+.button.button-primary:hover,
+.button.button-primary:focus {
+  color: #fff;
+  filter: brightness(90%);
+}
+
+/* Brand Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.icon {
+  padding: 0px 8px 3.5px 0px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+/* Brand Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Default (this is great for your own brand color!) */
+.button.button-default {
+  color: #ffffff;
+  background-color: #2457F5;
+}
+
+.button.button-default:hover,
+.button.button-default:focus {
+  filter: brightness(90%);
+}
+
+/* Calendly */
+.button.button-calendly {
+  color: #FFFFFF;
+  background-color: #006BFF;
+}
+
+.button.button-calendly:hover,
+.button.button-calendly:focus {
+  filter: brightness(90%);
+}
+
+/* Facebook */
+.button.button-faceb {
+  color: #ffffff;
+  background-color: #1877f2;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.20); 
+}
+
+.button.button-faceb:hover,
+.button.button-faceb:focus {
+  filter: brightness(90%);
+}
+
+/* Facebook Messenger */
+.button.button-messenger {
+  color: #ffffff;
+  background-image: linear-gradient(25deg,
+      #0099ff,
+      #5f5dff,
+      #a033ff,
+      #c740cc,
+      #ff5280,
+      #ff7061);
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.20); 
+}
+
+.button.button-messenger:hover,
+.button.button-messenger:focus {
+  filter: brightness(90%);
+}
+
+/* Instagram */
+.button.button-instagram {
+  color: #ffffff;
+  background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.20); 
+}
+
+.button.button-instagram:hover,
+.button.button-instagram:focus {
+  filter: brightness(90%);
+}
+
+/* Spotify */
+.button.button-spotify {
+  color: #191414;
+  background-color: #1db954;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.20); 
+}
+
+.button.button-spotify:hover,
+.button.button-spotify:focus {
+  filter: brightness(90%);
+}
+
+/* Telegram */
+.button.button-telegram {
+  color: #ffffff;
+  background-color: #3faee8;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.20); 
+}
+
+.button.button-telegram:hover,
+.button.button-telegram:focus {
+  filter: brightness(90%);
+}
+
+/* TikTok */
+.button.button-tiktok {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.20); 
+}
+
+.button.button-tiktok:hover,
+.button.button-tiktok:focus {
+  filter: brightness(90%);
+}
+
+/* Website */
+.button.button-web {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+}
+
+.button.button-web:hover,
+.button.button-web:focus {
+  filter: brightness(90%);
+}
+
+/* WhatsApp */
+.button.button-whatsapp {
+  color: #ffffff;
+  background-color: #455a64;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.20); 
+}
+
+.button.button-whatsapp:hover,
+.button.button-whatsapp:focus {
+  filter: brightness(90%);
+}
+
+/* Zoom */
+.button.button-zoom {
+  color: #ffffff;
+  background-color: #0B5CFF;
+}
+
+.button.button-zoom:hover,
+.button.button-zoom:focus {
+  filter: brightness(90%);
+}
