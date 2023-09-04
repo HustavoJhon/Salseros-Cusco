@@ -18,19 +18,10 @@ sheet = service.spreadsheets()
 id_autoincrement = 0  # Inicializa el ID autoincrementable
 while True:
     sexo = input("Ingrese Sexo (M/F): ").upper()
-    if sexo not in ('M', 'F'):
-        print("El sexo debe ser 'M' o 'F'. Inténtelo de nuevo.")
-        continue
-    
     nombre = input("Ingrese Nombre: ").capitalize()
     telefono = input("Ingrese Teléfono: ")
     fecha = datetime.now().strftime('%d/%m/%Y')
-    
     lugar = input("Ingrese Lugar (limacpampa/prado): ").lower()
-    if lugar not in ('limacpampa', 'prado'):
-        print("El lugar debe ser 'limacpampa' o 'prado'. Inténtelo de nuevo.")
-        continue
-    
     detalle = input("Ingrese Detalle: ")
     tipo = input("Ingrese Tipo: ")
     descripcion = input("Ingrese Descripción: ")
